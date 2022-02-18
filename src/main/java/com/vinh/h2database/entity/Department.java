@@ -1,5 +1,6 @@
 package com.vinh.h2database.entity;
 
+import lombok.Data;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Entity;
@@ -7,9 +8,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
 
 @Entity
+@Data //using Lombok dependency @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
 public class Department {
 
     @Id
@@ -25,7 +26,9 @@ public class Department {
     private String departmentAddress;
     private String departmentCode;
 
-    public Department() {
+    //USING LOMBOK to saving code
+
+   /* public Department() {
     }
 
     public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
@@ -66,4 +69,14 @@ public class Department {
     public void setDepartmentCode(String departmentCode) {
         this.departmentCode = departmentCode;
     }
+
+    @Override
+    public String toString() {
+        return "Department{" +
+                "departmentId=" + departmentId +
+                ", departmentName='" + departmentName + '\'' +
+                ", departmentAddress='" + departmentAddress + '\'' +
+                ", departmentCode='" + departmentCode + '\'' +
+                '}';
+    }*/
 }

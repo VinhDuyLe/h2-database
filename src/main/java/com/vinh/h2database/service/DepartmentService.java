@@ -1,20 +1,21 @@
 package com.vinh.h2database.service;
 
 import com.vinh.h2database.entity.Department;
+import com.vinh.h2database.error.DepartmentNotFoundException;
 
 import java.util.List;
 
 public interface DepartmentService {
 
-    public Department saveDepartment(Department department);
+    Department saveDepartment(Department department);
 
-    public List<Department> fetchDepartmentList();
+    List<Department> fetchDepartmentList();
 
-    public Department fetchDepartmentById(Long departmentId);
+    Department fetchDepartmentById(Long departmentId) throws DepartmentNotFoundException;
 
-    public void deleteDepartmentById(Long departmentId);
+    void deleteDepartmentById(Long departmentId);
 
-    public Department updateDepartment(Long departmentId, Department department);
+    Department updateDepartment(Long departmentId, Department department);
 
-    public Department fetchDepartmentByName(String departmentName);
+    Department fetchDepartmentByName(String departmentName);
 }
