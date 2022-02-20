@@ -20,7 +20,7 @@ public class DepartmentController {
     private final Logger LOGGER = LoggerFactory.getLogger(DepartmentController.class);
 
     @PostMapping("/departments")
-    public Department saveDeparment(@Valid @RequestBody Department department) {
+    public Department saveDepartment(@Valid @RequestBody Department department) {
         LOGGER.info("Inside saveDepartment of DepartmentController"); //showing message when run application and post info from user
         return departmentService.saveDepartment(department);
     }

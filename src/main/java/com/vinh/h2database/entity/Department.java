@@ -1,6 +1,9 @@
 package com.vinh.h2database.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Entity;
@@ -11,6 +14,9 @@ import javax.validation.constraints.NotBlank;
 
 @Entity
 @Data //using Lombok dependency @Getter @Setter @NoArgsConstructor @AllArgsConstructor @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Department {
 
     @Id
