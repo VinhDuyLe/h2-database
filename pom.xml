@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.vinh</groupId>
 	<artifactId>h2-database</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>h2-database</name>
-	<description>Spring Boot project using H2 JPA</description>
+	<description>Spring Boot projemsvct using H2 JPA</description>
 	<properties>
 		<java.version>11</java.version>
 	</properties>
@@ -41,7 +41,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-validation</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -52,6 +51,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
